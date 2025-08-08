@@ -9,6 +9,7 @@ import GetStartedPage from "./pages/GetStarted/GetStartedPage";
 import StartProjectPage from "./pages/NewProject/StartProjectPage";
 import DetailedServicesPage from "./pages/ServicesPage/DetailedServicesPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import EducationPage from "./pages/EducationPage/EducationPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/AboutPage",
     element: <AboutPage />,
+  },
+  {
+    path: "/education",
+    element: <EducationPage/>,
   },
 
 ])

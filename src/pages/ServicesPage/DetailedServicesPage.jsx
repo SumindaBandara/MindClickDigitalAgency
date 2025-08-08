@@ -49,35 +49,7 @@ const DetailedServicesPage = () => {
         { name: "Company Website", result: "90% User Satisfaction" }
       ]
     },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Mobile Development",
-      shortDesc: "Native and cross-platform apps",
-      overview: "Powerful mobile applications that engage users and drive results",
-      features: [
-        "Native iOS Development",
-        "Native Android Development",
-        "Cross-platform Solutions",
-        "Mobile UI/UX Design"
-      ],
-      process: [
-        "Market Research",
-        "Wireframing",
-        "Development",
-        "App Store Launch"
-      ],
-      pricing: [
-        { name: "Basic App", price: "$5,999" },
-        { name: "Advanced App", price: "$12,999" },
-        { name: "Enterprise App", price: "$25,999" }
-      ],
-      technologies: ["React Native", "Swift", "Kotlin", "Flutter"],
-      timeframe: "8-16 weeks",
-      portfolio: [
-        { name: "Fitness App", result: "1M+ Downloads" },
-        { name: "Banking App", result: "4.8 Star Rating" }
-      ]
-    },
+   
     {
       icon: <BarChart className="w-6 h-6" />,
       title: "Digital Marketing",

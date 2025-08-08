@@ -4,6 +4,7 @@ import Hero from './Component/Hero'
 import Hero2 from './Component/Hero2'
 import Body from './Component/Body'
 import Footer from '../../Components/Footer'
+import KnowledgePreview from './Component/KnowledgePreview'
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Navigation/>
       <Hero2/>
       <Body/>
+      <KnowledgePreview/>
       <Footer/>
 
     </div>
