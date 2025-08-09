@@ -70,8 +70,8 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-white">Get in Touch</h3>
-          <p>Email: <a href="mailto:hello@mindclick.com" className="hover:text-yellow-400">hello@mindclick.com</a></p>
-          <p>Phone: <a href="tel:+94701234567" className="hover:text-yellow-400">+94 70 123 4567</a></p>
+          <p>Email: <a href="mailto:hello@mindclick.com" className="hover:text-yellow-400">hello@themindclick.com</a></p>
+          <p>Phone: <a href="tel:+94701234567" className="hover:text-yellow-400">+94 70 77 80749</a></p>
           <div className="flex space-x-4 mt-4">
             <a href="#" className="hover:text-yellow-400">🌐</a>
             <a href="#" className="hover:text-yellow-400">📘</a>
