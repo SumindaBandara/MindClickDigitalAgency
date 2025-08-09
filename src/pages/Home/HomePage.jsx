@@ -9,11 +9,11 @@ import KnowledgePreview from './Component/KnowledgePreview'
 function HomePage() {
   return (
     <div>
-      <Navigation/>
+    
       <Hero2/>
       <Body/>
       <KnowledgePreview/>
-      <Footer/>
+      
 
     </div>
   )

@@ -38,11 +38,11 @@ const DetailedServicesPage = () => {
         "Testing & Launch"
       ],
       pricing: [
-        { name: "Basic Website", price: "$2,999" },
-        { name: "E-commerce", price: "$4,999" },
-        { name: "Custom Web App", price: "$8,999" }
+        { name: "Basic Website", price: "$250" },
+        { name: "E-commerce", price: "$500" },
+        { name: "Custom Web App", price: "$750" }
       ],
-      technologies: ["React", "Node.js", "Python", "PHP"],
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
       timeframe: "4-12 weeks",
       portfolio: [
         { name: "E-commerce Platform", result: "150% Revenue Increase" },
@@ -68,9 +68,9 @@ const DetailedServicesPage = () => {
         "Performance Tracking"
       ],
       pricing: [
-        { name: "Starter Package", price: "$999/mo" },
-        { name: "Growth Package", price: "$2,499/mo" },
-        { name: "Enterprise Package", price: "$4,999/mo" }
+        { name: "Starter Package", price: "$200/mo" },
+        { name: "Growth Package", price: "$300/mo" },
+        { name: "Enterprise Package", price: "$500/mo" }
       ],
       technologies: ["Google Analytics", "SEMrush", "HubSpot", "Meta Ads"],
       timeframe: "Ongoing",
