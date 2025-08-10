@@ -89,7 +89,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-white relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
@@ -269,14 +269,14 @@ export default function AboutPage() {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Whether you need marketing that converts or technology that transforms, we're here to make it happen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold py-4 px-8 rounded-xl hover:from-yellow-300 hover:to-amber-400 transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
               <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold py-4 px-8 rounded-xl hover:bg-yellow-400 hover:text-black transition-all duration-300">
                 Schedule a Call
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

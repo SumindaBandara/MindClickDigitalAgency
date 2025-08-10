@@ -5,9 +5,9 @@ import logo from "/public/assets/logo.png"; // Replace with your logo path
 
 const Hero2 = () => {
   return (
-    <div className="relative bg-black text-black overflow-hidden">
+    <div className="relative">
       {/* Yellow gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#ffd600]/20 via-black to-white" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-white" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
@@ -34,13 +34,15 @@ const Hero2 = () => {
             
             <div className="flex flex-wrap gap-4">
               <button className="group bg-[#ffd600] hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition-all duration-200 flex items-center gap-2">
-                <Link to='/NewProject'>Start Your Project</Link> 
+                <Link to='/education'>Start Learning</Link> 
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               
+              <Link to={"/contact"}>
               <button className="px-8 py-4 rounded-full font-semibold border border-[#ffd600] hover:bg-[#ffd600]/10 text-[#ffd600] transition-colors duration-200 flex items-center gap-2">
-                Watch Showreel
+                Connect with us
               </button>
+              </Link>
             </div>
           </div>
           
