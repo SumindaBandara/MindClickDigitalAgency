@@ -1,7 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
+
+import ScrollToTop from "./Components/ScrollToTop";
 
 // Pages
 import HomePage from "./pages/Home/HomePage";
@@ -15,9 +17,19 @@ import ContactPage from "./pages/Contact/ContactPage";
 // Layout
 import Layout from "./Components/Layout";
 
+// Root component that includes ScrollToTop
+function RootLayout() {
+  return (
+    <>
+      <ScrollToTop />
+      <Layout />
+    </>
+  );
+}
+
 const router = createBrowserRouter([
   {
-    element: <Layout />, // global navigation + footer
+    element: <RootLayout />, // Use RootLayout instead of Layout directly
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/GetStarted", element: <GetStartedPage /> },
