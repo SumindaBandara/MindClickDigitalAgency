@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import actual Link component
 import { ArrowRight, Calendar, User, Sparkles, BookOpen, TrendingUp, Eye, Clock } from 'lucide-react';
 
 const knowledgeItems = [
@@ -52,13 +53,6 @@ export default function KnowledgePreview() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Mock Link component since we don't have react-router-dom
-  const Link = ({ to, children, className, ...props }) => (
-    <a href={to} className={className} {...props}>
-      {children}
-    </a>
-  );
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-32 px-6 overflow-hidden">
@@ -198,9 +192,9 @@ export default function KnowledgePreview() {
                     <span>{item.views}</span>
                   </div>
 
-                  {/* Read More Button */}
+                  {/* Read More Button - Using proper Link component */}
                   <Link
-                    to={"/education"}
+                    to="/education"
                     className={`
                       group/btn w-full flex items-center justify-center px-6 py-3 
                       bg-gradient-to-r ${item.gradient} rounded-xl
