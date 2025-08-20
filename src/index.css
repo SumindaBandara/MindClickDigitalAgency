@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* index.css or globals.css */
+html, body, #root {
+  height: 100%;
+}
+
+.layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main {
+  flex: 1;
+}
+
+.quill-content {
+  @apply prose prose-lg max-w-none text-gray-800 leading-relaxed;
+}
+
+.quill-content h1,
+.quill-content h2,
+.quill-content h3 {
+  @apply font-bold text-gray-900;
+}
+
+.quill-content p {
+  @apply mb-4;
+}
+
+.quill-content ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.quill-content ol {
+  @apply list-decimal pl-6 mb-4;
+}
+
+.quill-content blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic text-gray-600;
+}

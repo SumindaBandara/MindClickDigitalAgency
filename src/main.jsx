@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
 import ScrollToTop from "./Components/ScrollToTop";
@@ -14,10 +14,19 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import EducationPage from "./pages/EducationPage/EducationPage";
 import ContactPage from "./pages/Contact/ContactPage";
 
+import { ClerkProvider } from "@clerk/clerk-react";
+
+// Blog pages
+import BlogList from "./Blog/pages/BlogList";
+import BlogDetail from "./Blog/pages/BlogDetail";
+import CreateBlog from "./Blog/pages/CreateBlog";
+
 // Layout
 import Layout from "./Components/Layout";
 
-// Root component that includes ScrollToTop
+const PUBLISHABLE_KEY = "pk_test_bmVhcmJ5LWJ1cnJvLTUwLmNsZXJrLmFjY291bnRzLmRldiQ";
+
+// Root component
 function RootLayout() {
   return (
     <>
@@ -29,7 +38,7 @@ function RootLayout() {
 
 const router = createBrowserRouter([
   {
-    element: <RootLayout />, // Use RootLayout instead of Layout directly
+    element: <RootLayout />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/GetStarted", element: <GetStartedPage /> },
@@ -37,13 +46,20 @@ const router = createBrowserRouter([
       { path: "/DetailedServicesPage", element: <DetailedServicesPage /> },
       { path: "/AboutPage", element: <AboutPage /> },
       { path: "/education", element: <EducationPage /> },
-      { path: "/contact", element: <ContactPage /> }
+      { path: "/contact", element: <ContactPage /> },
+
+      // ✅ Blogs
+      { path: "/blogs", element: <BlogList /> },
+      { path: "/blogs/:id", element: <BlogDetail /> },
+      { path: "/blogs/create", element: <CreateBlog /> }, // later protect with admin check
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
     <RouterProvider router={router} />
-  </StrictMode>
+    </ClerkProvider>
+  
 );

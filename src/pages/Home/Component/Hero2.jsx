@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronRight, Sparkles, Globe, Users } from 'lucide-react';
 import { Link } from "react-router-dom";
-import logo from "/public/assets/logo.png"; // Replace with your logo path
+import logo from "/assets/logo.png"; // Replace with your logo path
 
 const Hero2 = () => {
   return (

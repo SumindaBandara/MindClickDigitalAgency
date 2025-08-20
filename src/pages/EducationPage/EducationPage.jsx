@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BookOpen, TrendingUp, Eye, ArrowRight, X, Clock, Zap, Target, Lightbulb, Users, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function EducationPage() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -379,10 +380,12 @@ export default function EducationPage() {
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 max-w-2xl mx-auto">
               <h3 className="text-3xl font-bold text-white mb-4">Ready to Grow Your Business?</h3>
               <p className="text-gray-300 mb-6">Join other beginners who are already seeing results with our simple strategies.</p>
+              <Link to={"/blogs"}>
               <button className="group px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl text-black font-bold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/25">
                 Get More Free Tips
                 <ArrowRight className="w-5 h-5 ml-2 inline transform transition-transform group-hover:translate-x-1" />
               </button>
+              </Link>
             </div>
           </div>
         </div>
