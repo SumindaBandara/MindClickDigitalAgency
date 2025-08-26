@@ -1,242 +1,330 @@
 import React, { useState } from 'react';
 import { 
-  Code, 
-  Layout,
-  BarChart,
-  Search,
-  Smartphone,
-  PenTool,
-  ChevronDown,
+  TrendingUp, 
+  Globe,
+  Package,
   CheckCircle,
   ArrowRight,
-  Users,
   Clock,
   DollarSign,
-  Globe
+  Users,
+  MessageCircle,
+  BarChart,
+  Smartphone,
+  ShoppingCart,
+  Rocket,
+  Star,
+  Calendar,
+  Target,
+  Code,
+  Layout
 } from 'lucide-react';
 
-const DetailedServicesPage = () => {
+const UpdatedServicesPage = () => {
   const [activeService, setActiveService] = useState(0);
-  const [activeTab, setActiveTab] = useState('overview');
   
   const services = [
     {
-      icon: <Code className="w-6 h-6" />,
-      title: "Web Development",
-      shortDesc: "Custom websites and web applications",
-      overview: "End-to-end web development solutions tailored to your business needs",
-      features: [
-        "Responsive Design",
-        "Custom CMS Integration",
-        "E-commerce Solutions",
-        "Progressive Web Apps"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Marketing Packages",
+      shortDesc: "Monthly retainer for social media growth",
+      overview: "Complete social media marketing solutions to grow your brand and generate leads consistently",
+      packages: [
+        {
+          name: "Starter Plan",
+          price: "Rs.12,500/month",
+          emoji: "🌱",
+          target: "For small businesses just starting online",
+          features: [
+            "2 Social Media Platforms (FB + Instagram)",
+            "8 Posts per month (2 per week – graphics + captions)",
+            "Basic Audience Research & Hashtags",
+            "Monthly Performance Report",
+            "1 Ad Campaign Setup (budget paid separately)"
+          ]
+        },
+        {
+          name: "Growth Plan",
+          price: "Rs.25,000/month",
+          emoji: "🚀",
+          target: "For growing businesses that want real leads",
+          features: [
+            "3 Social Media Platforms (FB, Instagram, TikTok or LinkedIn)",
+            "12 Posts per month (3 per week – graphics + captions + short reels)",
+            "Ad Campaigns (2 per month, optimization included)",
+            "Competitor & Audience Analysis",
+            "Engagement Boost (reply to comments/messages)",
+            "Bi-weekly Reports with insights"
+          ],
+          popular: true
+        },
+        {
+          name: "Premium Plan",
+          price: "Rs.40,000/month",
+          emoji: "🏆",
+          target: "For businesses that want full growth & brand building",
+          features: [
+            "4 Platforms (FB, IG, TikTok, LinkedIn/YouTube Shorts)",
+            "16–20 Posts per month (4–5 per week, mix of content)",
+            "3–4 Ad Campaigns + Retargeting",
+            "Business Page Optimization",
+            "Content Calendar & Marketing Strategy",
+            "Advanced Reports (ROI, leads, conversions)",
+            "Monthly Strategy Call"
+          ]
+        }
       ],
-      process: [
-        "Requirements Analysis",
-        "UI/UX Design",
-        "Development",
-        "Testing & Launch"
-      ],
-      pricing: [
-        { name: "Basic Website", price: "$250" },
-        { name: "E-commerce", price: "$500" },
-        { name: "Custom Web App", price: "$750" }
-      ],
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      timeframe: "4-12 weeks",
-      portfolio: [
-        { name: "E-commerce Platform", result: "150% Revenue Increase" },
-        { name: "Company Website", result: "90% User Satisfaction" }
-      ]
+      technologies: ["Facebook Ads", "Instagram", "TikTok", "LinkedIn", "Analytics"],
+      timeframe: "Ongoing monthly service"
     },
-   
     {
-      icon: <BarChart className="w-6 h-6" />,
-      title: "Digital Marketing",
-      shortDesc: "Result-driven marketing strategies",
-      overview: "Comprehensive digital marketing solutions to grow your business",
-      features: [
-        "SEO Optimization",
-        "PPC Campaigns",
-        "Social Media Marketing",
-        "Content Strategy"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Website Packages",
+      shortDesc: "MERN Stack web development solutions",
+      overview: "Professional websites built with modern MERN stack technology to establish your digital presence",
+      packages: [
+        {
+          name: "Basic Web Presence",
+          price: "Rs.20,000",
+          emoji: "🖥️",
+          target: "For small businesses that just want an online face",
+          features: [
+            "1–3 Pages (Home, About, Contact)",
+            "Responsive design with React",
+            "Contact Form with Node.js backend",
+            "Basic SEO (meta tags, sitemap)",
+            "Delivery in 1 Week"
+          ]
+        },
+        {
+          name: "Business Website",
+          price: "Rs.40,000",
+          emoji: "🌐",
+          target: "For service businesses that want credibility + features",
+          features: [
+            "4–6 Pages (Home, About, Services, Gallery, Blog, Contact)",
+            "Admin Dashboard (basic CRUD operations)",
+            "WhatsApp/FB Messenger integration",
+            "Analytics Integration (Google Analytics)",
+            "Delivery in 2–3 Weeks"
+          ],
+          popular: true
+        },
+        {
+          name: "E-Commerce Website",
+          price: "Rs.75,000+",
+          emoji: "🛒",
+          target: "For businesses ready to sell online",
+          features: [
+            "MERN-based eCommerce platform",
+            "Product Management (CRUD for products, categories)",
+            "Cart + Checkout Flow",
+            "Payment Gateway Integration (PayHere/Stripe/PayPal)",
+            "Order Management Dashboard",
+            "SEO + Analytics + Customer Login",
+            "Delivery in 3–5 Weeks"
+          ]
+        }
       ],
-      process: [
-        "Market Analysis",
-        "Strategy Development",
-        "Campaign Launch",
-        "Performance Tracking"
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Payment Gateways"],
+      timeframe: "1-5 weeks delivery"
+    },
+    {
+      icon: <Package className="w-6 h-6" />,
+      title: "Full Stack Launch Pack",
+      shortDesc: "Complete digital transformation solution",
+      overview: "All-in-one business launch solution from zero to complete digital presence",
+      packages: [
+        {
+          name: "Business Launch Pack",
+          price: "Rs.1,00,000",
+          emoji: "🚀",
+          target: "Complete online launch from 0 → Digital Presence",
+          features: [
+            "Business Research & Competitor Analysis",
+            "Branding Kit (logo, fonts, social templates)",
+            "Business Website (5–6 pages on MERN)",
+            "Social Media Setup (FB, IG, TikTok, LinkedIn)",
+            "10 Branded Social Media Posts",
+            "1 Ad Campaign Setup (client funds extra)",
+            "Training: How to manage site & social media"
+          ],
+          isOneTime: true
+        }
       ],
-      pricing: [
-        { name: "Starter Package", price: "$200/mo" },
-        { name: "Growth Package", price: "$300/mo" },
-        { name: "Enterprise Package", price: "$500/mo" }
-      ],
-      technologies: ["Google Analytics", "SEMrush", "HubSpot", "Meta Ads"],
-      timeframe: "Ongoing",
-      portfolio: [
-        { name: "E-commerce SEO", result: "200% Organic Traffic" },
-        { name: "PPC Campaign", result: "350% ROI" }
-      ]
+      technologies: ["Complete MERN Stack", "Social Media Tools", "Design Software", "Analytics"],
+      timeframe: "4-6 weeks complete setup"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Services & Solutions
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <Star className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm">Premium Digital Solutions</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Transform Your Business
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive digital solutions to transform your business
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              From social media marketing to full-stack web development, we provide everything you need to dominate the digital space
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-12">
+      {/* Service Selection Cards */}
+      <section className="py-16 -mt-12 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Service Selection */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <button
                 key={index}
                 onClick={() => setActiveService(index)}
-                className={`p-6 rounded-xl text-left transition-all ${
+                className={`group p-8 rounded-2xl text-left transition-all duration-300 hover:scale-105 ${
                   activeService === index 
-                    ? 'bg-white shadow-lg ring-2 ring-indigo-500' 
-                    : 'bg-white shadow hover:shadow-lg'
+                    ? 'bg-white shadow-2xl ring-2 ring-indigo-500 transform scale-105' 
+                    : 'bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl'
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className="bg-indigo-100 p-3 rounded-lg text-indigo-600">
+                <div className="flex items-start gap-6">
+                  <div className={`p-4 rounded-xl transition-colors ${
+                    activeService === index 
+                      ? 'bg-indigo-500 text-white' 
+                      : 'bg-indigo-100 text-indigo-600 group-hover:bg-indigo-200'
+                  }`}>
                     {service.icon}
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600">{service.shortDesc}</p>
+                    <p className="text-gray-600 leading-relaxed">{service.shortDesc}</p>
+                    <div className="flex items-center gap-2 mt-3 text-indigo-600">
+                      <span className="text-sm font-medium">Explore details</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Service Details */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Left Column - Main Info */}
-              <div className="lg:col-span-2">
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-indigo-100 p-3 rounded-lg text-indigo-600">
-                      {services[activeService].icon}
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900">
-                      {services[activeService].title}
-                    </h2>
+      {/* Service Details */}
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="p-8 md:p-12">
+              {/* Service Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-4 bg-indigo-50 p-4 rounded-2xl mb-6">
+                  <div className="bg-indigo-500 p-3 rounded-xl text-white">
+                    {services[activeService].icon}
                   </div>
-                  
-                  <p className="text-gray-600 text-lg mb-6">
-                    {services[activeService].overview}
-                  </p>
-
-                  {/* Features Grid */}
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {services[activeService].features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                        <CheckCircle className="w-5 h-5 text-indigo-500" />
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    {services[activeService].title}
+                  </h2>
                 </div>
-
-                {/* Process Timeline */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold mb-6">Development Process</h3>
-                  <div className="space-y-4">
-                    {services[activeService].process.map((step, index) => (
-                      <div key={index} className="flex items-center gap-4">
-                        <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-semibold">
-                          {index + 1}
-                        </div>
-                        <div className="flex-1 p-4 bg-gray-50 rounded-lg">
-                          {step}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Portfolio Showcase */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-6">Success Stories</h3>
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    {services[activeService].portfolio.map((item, index) => (
-                      <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                        <h4 className="font-semibold text-gray-900 mb-2">{item.name}</h4>
-                        <div className="text-indigo-600 font-semibold">{item.result}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  {services[activeService].overview}
+                </p>
               </div>
 
-              {/* Right Column - Pricing & Details */}
-              <div className="bg-gray-50 rounded-xl p-6">
-                <div className="space-y-6">
-                  {/* Pricing Plans */}
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Pricing Plans</h3>
+              {/* Packages Grid */}
+              <div className="grid lg:grid-cols-3 gap-8 mb-12">
+                {services[activeService].packages.map((pkg, index) => (
+                  <div key={index} className={`relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border-2 transition-all hover:shadow-xl ${
+                    pkg.popular ? 'border-indigo-500 ring-2 ring-indigo-200' : 'border-gray-200 hover:border-indigo-300'
+                  }`}>
+                    {pkg.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-indigo-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    
+                    <div className="text-center mb-8">
+                      <div className="text-4xl mb-3">{pkg.emoji}</div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                      <div className="text-3xl font-bold text-indigo-600 mb-3">
+                        {pkg.price}
+                        {pkg.isOneTime && <span className="text-sm text-gray-500 block">One-Time</span>}
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">{pkg.target}</p>
+                    </div>
+
                     <div className="space-y-4">
-                      {services[activeService].pricing.map((plan, index) => (
-                        <div key={index} className="bg-white p-4 rounded-lg flex justify-between items-center">
-                          <span className="text-gray-900">{plan.name}</span>
-                          <span className="font-semibold text-indigo-600">{plan.price}</span>
+                      {pkg.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-indigo-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
 
-                  {/* Quick Facts */}
+                    
+                  </div>
+                ))}
+              </div>
+
+              {/* Service Info Footer */}
+              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8">
+                <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-5 h-5 text-indigo-600" />
-                        <span className="text-gray-700">Timeframe: {services[activeService].timeframe}</span>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <Globe className="w-5 h-5 text-indigo-600" />
-                          <span className="text-gray-700">Technologies:</span>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {services[activeService].technologies.map((tech, index) => (
-                            <span key={index} className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
+                      <Clock className="w-6 h-6 text-indigo-600" />
+                      Timeline & Delivery
+                    </h3>
+                    <p className="text-gray-700 text-lg">{services[activeService].timeframe}</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
+                      <Code className="w-6 h-6 text-indigo-600" />
+                      Technologies Used
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {services[activeService].technologies.map((tech, index) => (
+                        <span key={index} className="px-4 py-2 bg-white text-indigo-600 rounded-full text-sm font-medium shadow-sm">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
-
-                  {/* CTA */}
-                  <button className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
-                    Get Started
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-indigo-100 mb-8">
+            Let's discuss which package fits your needs and get you started on your digital journey
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+              <MessageCircle className="w-5 h-5" />
+              Book a Consultation
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-colors flex items-center justify-center gap-2">
+              <BarChart className="w-5 h-5" />
+              View Portfolio
+            </button>
           </div>
         </div>
       </section>
@@ -244,4 +332,4 @@ const DetailedServicesPage = () => {
   );
 };
 
-export default DetailedServicesPage;
+export default UpdatedServicesPage;

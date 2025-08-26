@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://api.render.com/deploy/srv-d2j2ct15pdvs73cpt95g?key=iifiYz7t_N0/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://blogs-backend-sl4p.onrender.com/api",
 });
 
 export const fetchBlogs = () => API.get("/blogs");   // ✅ named export
