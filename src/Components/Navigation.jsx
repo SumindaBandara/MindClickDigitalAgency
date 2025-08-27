@@ -59,26 +59,22 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#ffd600]">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {menuItems.map((item) => (
-              <Link
-                key={item.title}
-                to={item.path}
-                className="text-gray-100 hover:text-white hover:bg-[#ffd600] block px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item.title}
-              </Link>
-            ))}
-            {/* <Link
-              to="/GetStarted"
-              className="w-full text-center bg-white text-[#ffd600] hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium mt-4"
-            >
-              Get Started
-            </Link> */}
-          </div>
-        </div>
-      )}
+  <div className="md:hidden bg-[#ffd600]">
+    <div className="px-2 pt-2 pb-3 space-y-1">
+      {menuItems.map((item) => (
+        <Link
+          key={item.title}
+          to={item.path}
+          onClick={() => setIsOpen(false)}
+          className="text-gray-100 hover:text-white hover:bg-[#ffd600] block px-3 py-2 rounded-md text-base font-medium"
+        >
+          {item.title}
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+
     </nav>
   );
 };

@@ -56,115 +56,111 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-white relative overflow-hidden">
-      {/* Animated Background Elements */}
+    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+      
+      {/* Modern geometric background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-amber-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse animation-delay-2s"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-pulse animation-delay-4s"></div>
-      </div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(40)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-yellow-400 rounded-full opacity-60"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 15}s`,
-              animation: `float ${8 + Math.random() * 8}s infinite linear`
-            }}
-          ></div>
-        ))}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-yellow-400 rounded-full"></div>
+          <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-yellow-400 opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-32 h-32 border-2 border-yellow-400 rotate-45"></div>
+        </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+        
+        {/* Grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(#ffd600 1px, transparent 1px),
+              linear-gradient(90deg, #ffd600 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}
+        ></div>
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-6">
         
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-6xl font-black mb-4">
-            <span className="bg-gradient-to-r from-yellow-600 via-amber-600 to-orange-600 bg-clip-text text-transparent">
-              Get In Touch
-            </span>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4 px-6 py-2 border border-yellow-400/30 rounded-full">
+            <span className="text-yellow-400 text-sm font-medium tracking-wider uppercase">Contact</span>
+          </div>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white leading-tight">
+            Let's Work
+            <span className="block text-yellow-400">Together</span>
           </h1>
-          <p className="text-xl text-white max-w-2xl">
-            Ready to transform your digital presence? Let's start the conversation.
+          <p className="text-slate-300 text-xl max-w-2xl leading-relaxed">
+            Ready to bring your vision to life? Drop us a message and let's create something extraordinary.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto mt-4"></div>
         </div>
 
-        {/* Form Container */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl max-w-2xl w-full p-10 border border-yellow-200/50 relative overflow-hidden">
+        {/* Main Form Container */}
+        <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-12">
           
-          {/* Decorative Elements */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full opacity-20"></div>
-          <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-orange-400 to-yellow-500 rounded-full opacity-15"></div>
-          
-          <div className="relative z-10">
-            <h2 className="text-4xl font-bold text-center mb-8">
-              <span className="bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">
-                Contact Us
-              </span>
-            </h2>
-
+          {/* Contact Form */}
+          <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 hover:border-yellow-400/30 transition-all duration-500">
+            <h2 className="text-3xl font-bold text-white mb-8">Send Message</h2>
+            
             <div className="space-y-6">
               
               {/* Name Field */}
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                <div className="relative flex items-center bg-gradient-to-r from-yellow-50 to-amber-50 rounded-2xl p-4 border-2 border-yellow-200 focus-within:border-yellow-400 transition-all duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <User className="w-6 h-6 text-white" />
-                  </div>
+              <div className="group">
+                <label className="block text-slate-300 text-sm font-medium mb-3 uppercase tracking-wider">Name</label>
+                <div className="relative">
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Your Name"
+                    placeholder="John Doe"
                     required
-                    className="w-full bg-transparent text-gray-800 text-lg placeholder-gray-600 focus:outline-none font-medium"
+                    className="w-full bg-slate-900/50 border border-slate-600 rounded-2xl px-6 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/20 transition-all duration-300"
                   />
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                    <User className="w-5 h-5 text-slate-500 group-focus-within:text-yellow-400 transition-colors" />
+                  </div>
                 </div>
               </div>
 
               {/* Email Field */}
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                <div className="relative flex items-center bg-gradient-to-r from-yellow-50 to-amber-50 rounded-2xl p-4 border-2 border-yellow-200 focus-within:border-yellow-400 transition-all duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
+              <div className="group">
+                <label className="block text-slate-300 text-sm font-medium mb-3 uppercase tracking-wider">Email</label>
+                <div className="relative">
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Your Email"
+                    placeholder="john@example.com"
                     required
-                    className="w-full bg-transparent text-gray-800 text-lg placeholder-gray-600 focus:outline-none font-medium"
+                    className="w-full bg-slate-900/50 border border-slate-600 rounded-2xl px-6 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/20 transition-all duration-300"
                   />
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                    <Mail className="w-5 h-5 text-slate-500 group-focus-within:text-yellow-400 transition-colors" />
+                  </div>
                 </div>
               </div>
 
               {/* Message Field */}
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                <div className="relative flex items-start bg-gradient-to-r from-yellow-50 to-amber-50 rounded-2xl p-4 border-2 border-yellow-200 focus-within:border-yellow-400 transition-all duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-xl flex items-center justify-center mr-4 mt-2 group-hover:scale-110 transition-transform duration-300">
-                    <MessageCircle className="w-6 h-6 text-white" />
-                  </div>
+              <div className="group">
+                <label className="block text-slate-300 text-sm font-medium mb-3 uppercase tracking-wider">Message</label>
+                <div className="relative">
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Your Message"
+                    placeholder="Tell us about your project..."
                     rows="5"
                     required
-                    className="w-full bg-transparent text-gray-800 text-lg placeholder-gray-600 focus:outline-none resize-none font-medium"
+                    className="w-full bg-slate-900/50 border border-slate-600 rounded-2xl px-6 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
                   ></textarea>
+                  <div className="absolute right-4 top-4">
+                    <MessageCircle className="w-5 h-5 text-slate-500 group-focus-within:text-yellow-400 transition-colors" />
+                  </div>
                 </div>
               </div>
 
@@ -173,133 +169,123 @@ export default function ContactPage() {
                 type="button"
                 onClick={handleSubmit}
                 disabled={isLoading}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-white font-bold text-lg hover:from-yellow-500 hover:via-amber-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-3 relative overflow-hidden group"
+                className="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-3 group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {isLoading ? (
                   <>
-                    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-slate-900 border-t-transparent rounded-full animate-spin"></div>
                     <span>Sending...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-6 h-6" />
                     <span>Send Message</span>
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
               </button>
             </div>
 
+            {/* Result Message */}
             {result && (
-              <div className={`mt-6 p-4 rounded-2xl text-center font-semibold text-lg ${
+              <div className={`mt-6 p-4 rounded-2xl text-center font-medium ${
                 result.includes('✅') 
-                  ? 'bg-green-100 text-green-800 border-2 border-green-200' 
-                  : 'bg-red-100 text-red-800 border-2 border-red-200'
+                  ? 'bg-green-400/10 text-green-400 border border-green-400/20' 
+                  : 'bg-red-400/10 text-red-400 border border-red-400/20'
               }`}>
                 {result}
               </div>
             )}
           </div>
-        </div>
 
-        {/* Social Media Section */}
-        <div className="mt-12 text-center max-w-2xl w-full">
-          <div className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-yellow-200/50 shadow-xl">
-            <h3 className="text-3xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">
-                Connect with us
-              </span>
-            </h3>
+          {/* Contact Info & Social */}
+          <div className="space-y-8">
             
-            {/* Social Icons */}
-            <div className="flex justify-center space-x-6 mb-8">
-              <a
-                href="https://www.facebook.com/YourPage"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg group"
-              >
-                <Facebook className="w-7 h-7 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                href="https://www.instagram.com/YourProfile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg group"
-              >
-                <Instagram className="w-7 h-7 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/YourCompany"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg group"
-              >
-                <Linkedin className="w-7 h-7 group-hover:scale-110 transition-transform" />
-              </a>
+            {/* Contact Information */}
+            <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Mail className="w-6 h-6 text-slate-900" />
+                  </div>
+                  <div>
+                    <p className="text-slate-400 text-sm uppercase tracking-wider font-medium">Email</p>
+                    <a 
+                      href="mailto:contact@themindclick.com" 
+                      className="text-white text-lg font-medium hover:text-yellow-400 transition-colors"
+                    >
+                      contact@themindclick.com
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Phone className="w-6 h-6 text-slate-900" />
+                  </div>
+                  <div>
+                    <p className="text-slate-400 text-sm uppercase tracking-wider font-medium">Phone</p>
+                    <a 
+                      href="tel:+94707780749" 
+                      className="text-white text-lg font-medium hover:text-yellow-400 transition-colors"
+                    >
+                      +94 70 77 80749
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="flex items-center justify-center space-x-3 text-gray-700">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-lg flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-white" />
-                </div>
-                <a 
-                  href="mailto:contact@themindclick.com" 
-                  className="text-lg font-medium hover:text-yellow-600 transition-colors underline decoration-yellow-400 decoration-2 underline-offset-4"
+            {/* Social Media */}
+            <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+              
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/YourPage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-14 h-14 bg-slate-700/50 hover:bg-blue-600 rounded-2xl flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 group border border-slate-600/50 hover:border-blue-500"
                 >
-                  contact@themindclick.com
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/YourProfile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-14 h-14 bg-slate-700/50 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-2xl flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 group border border-slate-600/50 hover:border-purple-400"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/YourCompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-14 h-14 bg-slate-700/50 hover:bg-blue-700 rounded-2xl flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 group border border-slate-600/50 hover:border-blue-500"
+                >
+                  <Linkedin className="w-6 h-6" />
                 </a>
               </div>
-              
-              <div className="flex items-center justify-center space-x-3 text-gray-700">
-                <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-white" />
-                </div>
-                <a 
-                  href="+94707780749" 
-                  className="text-lg font-medium hover:text-yellow-600 transition-colors underline decoration-yellow-400 decoration-2 underline-offset-4"
-                >
-                  +94 70 77 80749
-                </a>
+            </div>
+
+            {/* Call to Action */}
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-8 text-slate-900">
+              <h3 className="text-2xl font-bold mb-3">Ready to Start?</h3>
+              <p className="mb-4 opacity-90">
+                Let's discuss your project and bring your ideas to life.
+              </p>
+              <div className="flex items-center space-x-2 text-sm font-medium">
+                <span>Response within 24 hours</span>
+                <div className="w-2 h-2 bg-slate-900 rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { 
-            transform: translateY(0px) rotate(0deg); 
-            opacity: 0.6;
-          }
-          25% { 
-            transform: translateY(-20px) rotate(90deg); 
-            opacity: 0.8;
-          }
-          50% { 
-            transform: translateY(-10px) rotate(180deg); 
-            opacity: 1;
-          }
-          75% { 
-            transform: translateY(-30px) rotate(270deg); 
-            opacity: 0.7;
-          }
-        }
-        
-        .animation-delay-2s {
-          animation-delay: 2s;
-        }
-        
-        .animation-delay-4s {
-          animation-delay: 4s;
-        }
-      `}</style>
     </div>
   );
 }

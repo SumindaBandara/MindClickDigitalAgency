@@ -25,58 +25,64 @@ const UpdatedServicesPage = () => {
   
   const services = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Marketing Packages",
-      shortDesc: "Monthly retainer for social media growth",
-      overview: "Complete social media marketing solutions to grow your brand and generate leads consistently",
-      packages: [
-        {
-          name: "Starter Plan",
-          price: "Rs.12,500/month",
-          emoji: "🌱",
-          target: "For small businesses just starting online",
-          features: [
-            "2 Social Media Platforms (FB + Instagram)",
-            "8 Posts per month (2 per week – graphics + captions)",
-            "Basic Audience Research & Hashtags",
-            "Monthly Performance Report",
-            "1 Ad Campaign Setup (budget paid separately)"
-          ]
-        },
-        {
-          name: "Growth Plan",
-          price: "Rs.25,000/month",
-          emoji: "🚀",
-          target: "For growing businesses that want real leads",
-          features: [
-            "3 Social Media Platforms (FB, Instagram, TikTok or LinkedIn)",
-            "12 Posts per month (3 per week – graphics + captions + short reels)",
-            "Ad Campaigns (2 per month, optimization included)",
-            "Competitor & Audience Analysis",
-            "Engagement Boost (reply to comments/messages)",
-            "Bi-weekly Reports with insights"
-          ],
-          popular: true
-        },
-        {
-          name: "Premium Plan",
-          price: "Rs.40,000/month",
-          emoji: "🏆",
-          target: "For businesses that want full growth & brand building",
-          features: [
-            "4 Platforms (FB, IG, TikTok, LinkedIn/YouTube Shorts)",
-            "16–20 Posts per month (4–5 per week, mix of content)",
-            "3–4 Ad Campaigns + Retargeting",
-            "Business Page Optimization",
-            "Content Calendar & Marketing Strategy",
-            "Advanced Reports (ROI, leads, conversions)",
-            "Monthly Strategy Call"
-          ]
-        }
-      ],
-      technologies: ["Facebook Ads", "Instagram", "TikTok", "LinkedIn", "Analytics"],
-      timeframe: "Ongoing monthly service"
+  icon: <TrendingUp className="w-6 h-6" />,
+  title: "Marketing Packages",
+  shortDesc: "Monthly retainer for full social media growth",
+  overview: "From research & setup to content, ads, and consulting — everything your business needs to grow online with trust and consistency.",
+  packages: [
+    {
+      name: "Starter Plan",
+      price: "Rs.12,500/month",
+      emoji: "🌱",
+      target: "For small businesses starting online",
+      features: [
+        "Business & Audience Research (niche + competitors)",
+        "Business Page Setup & Branding (logo, colors, about, highlights)",
+        "2 Social Media Platforms (FB + Instagram)",
+        "Up to 8 Posts per month (flexible to your goals, no extra fee)",
+        "Monthly Consultation Call (strategy & future goal planning)",
+        "1 Ad Campaign Setup (budget separate)",
+        "Monthly Performance Report"
+      ]
     },
+    {
+      name: "Growth Plan",
+      price: "Rs.25,000/month",
+      emoji: "🚀",
+      target: "For growing businesses that want leads & strong presence",
+      features: [
+        "Complete Business & Competitor Research",
+        "Page Optimization + Business Theme Setup",
+        "3 Platforms (FB, IG + TikTok or LinkedIn)",
+        "Around 12 Posts per month (flexible to campaign needs)",
+        "2 Ad Campaigns per month (with optimization)",
+        "Engagement Boost (reply to comments/messages)",
+        "Bi-weekly Reports with insights",
+        "Strategy Consultation Call (every 2 weeks)"
+      ],
+      popular: true
+    },
+    {
+      name: "Premium Plan",
+      price: "Rs.40,000/month",
+      emoji: "🏆",
+      target: "For businesses wanting full brand growth & authority",
+      features: [
+        "Full Business Research + Market Positioning",
+        "Business Page Optimization + Brand Guidelines",
+        "4 Platforms (FB, IG, TikTok, LinkedIn/YouTube Shorts)",
+        "16–20+ Posts per month (we focus on results, not limits)",
+        "3–4 Ad Campaigns + Retargeting",
+        "Custom Content Calendar + Marketing Strategy",
+        "Advanced Reports (ROI, leads, conversions)",
+        "Monthly Business Consultation & Future Goal Planning"
+      ]
+    }
+  ],
+  technologies: ["Facebook Ads", "Instagram", "TikTok", "LinkedIn", "Analytics"],
+  timeframe: "Ongoing monthly service"
+}
+,
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Website Packages",
