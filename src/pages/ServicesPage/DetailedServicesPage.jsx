@@ -17,7 +17,8 @@ import {
   Calendar,
   Target,
   Code,
-  Layout
+  Layout,
+  Link
 } from 'lucide-react';
 
 const UpdatedServicesPage = () => {
@@ -143,16 +144,16 @@ const UpdatedServicesPage = () => {
       packages: [
         {
           name: "Business Launch Pack",
-          price: "Rs.1,00,000",
+          price: "Customized Price",
           emoji: "🚀",
           target: "Complete online launch from 0 → Digital Presence",
           features: [
             "Business Research & Competitor Analysis",
             "Branding Kit (logo, fonts, social templates)",
-            "Business Website (5–6 pages on MERN)",
+            "Business Website (Customized)",
             "Social Media Setup (FB, IG, TikTok, LinkedIn)",
-            "10 Branded Social Media Posts",
-            "1 Ad Campaign Setup (client funds extra)",
+            "Branded Social Media Posts",
+            "Ad Campaigns Setup",
             "Training: How to manage site & social media"
           ],
           isOneTime: true
@@ -323,14 +324,13 @@ const UpdatedServicesPage = () => {
             Let's discuss which package fits your needs and get you started on your digital journey
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to = {"/contact"}>
             <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" />
-              Book a Consultation
+              Book a Consultationfff
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-colors flex items-center justify-center gap-2">
-              <BarChart className="w-5 h-5" />
-              View Portfolio
-            </button>
+            </Link>
+            
           </div>
         </div>
       </section>
