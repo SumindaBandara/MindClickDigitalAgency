@@ -13,7 +13,9 @@ import DetailedServicesPage from "./pages/ServicesPage/DetailedServicesPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import EducationPage from "./pages/EducationPage/EducationPage";
 import ContactPage from "./pages/Contact/ContactPage";
-
+import Shop1 from "./pages/My work/shop1";
+import Shop2 from "./pages/My work/shop2";
+import Shop3 from "./pages/My work/shop3";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 // Blog pages
@@ -47,6 +49,9 @@ const router = createBrowserRouter([
       { path: "/AboutPage", element: <AboutPage /> },
       { path: "/education", element: <EducationPage /> },
       { path: "/contact", element: <ContactPage /> },
+      { path: "/shop1", element: <Shop1/> },
+      { path: "/shop2", element: <Shop2/> },
+      { path: "/shop3", element: <Shop3/> },
 
       // ✅ Blogs
       { path: "/blogs", element: <BlogList /> },

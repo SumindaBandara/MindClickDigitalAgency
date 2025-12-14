@@ -43,6 +43,12 @@ const Hero2 = () => {
                 Connect with us
               </button>
               </Link>
+
+              <Link to={"/shop1"}>
+              <button className="px-8 py-4 rounded-full font-semibold border border-[#ffd600] hover:bg-[#ffd600]/10 text-[#ffd600] transition-colors duration-200 flex items-center gap-2">
+                Works
+              </button>
+              </Link>
             </div>
           </div>
           
