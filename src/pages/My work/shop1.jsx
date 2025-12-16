@@ -100,21 +100,21 @@ const shop1 = () => {
   // Portfolio links - REPLACE URLs with your actual portfolio page URLs
   const portfolioLinks = [
     {
-      name: "Tech Startup",
+      name: "Cafe",
       url: "/shop1", // REPLACE WITH YOUR URL
-      icon: "💻",
+      icon: "🍽️",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Fashion Brand",
+      name: "Shoe shop ",
       url: "/shop2", // REPLACE WITH YOUR URL
-      icon: "👗",
+      icon: "👟",
       color: "from-pink-500 to-rose-500"
     },
     {
-      name: "Food & Beverage",
+      name: "Dental",
       url: "/shop3", // REPLACE WITH YOUR URL
-      icon: "🍽️",
+      icon: "🦷",
       color: "from-orange-500 to-amber-500"
     }
   ];
@@ -245,25 +245,43 @@ const shop1 = () => {
               {/* Demo Homepage - Replace this with your actual component */}
               <div className="h-[600px] overflow-y-auto">
           {/* Sticky Navbar */}
-          <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-              <div className={`text-2xl font-bold bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent`}>
-                {config.businessName}
-              </div>
-              <div className="hidden md:flex items-center gap-8">
-                <a href="#home" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Home</a>
-                <a href="#about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</a>
-                <a href="#services" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</a>
-                <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Contact</a>
-              </div>
-              <a 
-                href={config.primaryCTALink}
-                className={`bg-gradient-to-r ${config.primaryGradient} text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all`}
-              >
-                {config.primaryCTA}
-              </a>
-            </div>
-          </nav>
+         <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+  {/* CHANGE 1: Responsive Padding (px-4 py-3 on mobile, px-6 py-4 on desktop) */}
+  <div className="max-w-7xl mx-auto px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
+    
+    {/* CHANGE 2: Responsive Logo Text Size (text-xl on mobile, text-2xl on desktop) */}
+    <div className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent`}>
+      {config.businessName}
+    </div>
+
+    {/* Desktop Links (Hidden on Mobile) */}
+    <div className="hidden md:flex items-center gap-8">
+      <a href="#home" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Home</a>
+      <a href="#about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</a>
+      <a href="#services" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</a>
+      <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Contact</a>
+    </div>
+
+    {/* Right Side Actions */}
+    <div className="flex items-center gap-3">
+      {/* CHANGE 3: Responsive Button (smaller text/padding on mobile) */}
+      <a 
+        href={config.primaryCTALink}
+        className={`bg-gradient-to-r ${config.primaryGradient} text-white px-4 py-2 md:px-6 md:py-2 rounded-full font-semibold text-xs md:text-base hover:shadow-lg transform hover:scale-105 transition-all`}
+      >
+        {config.primaryCTA}
+      </a>
+
+      {/* CHANGE 4: Hamburger Menu (Visible ONLY on Mobile 'md:hidden') */}
+      <button className="md:hidden text-gray-700 hover:text-orange-600 p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    
+  </div>
+</nav>
 
           {/* Hero Section */}
           <section 
@@ -301,19 +319,21 @@ const shop1 = () => {
 
           {/* Stats Section */}
           <section className={`bg-gradient-to-r ${config.secondaryGradient} py-12`}>
-            <div className="max-w-7xl mx-auto px-6">
-              <div className="grid grid-cols-4 gap-8">
-                {config.stats.map((stat, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className={`text-5xl font-bold bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent mb-2`}>
-                      {stat.value}
-                    </div>
-                    <div className="text-gray-600 font-medium">{stat.label}</div>
+          <div className="max-w-7xl mx-auto px-6">
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              
+              {config.stats.map((stat, idx) => (
+                <div key={idx} className="text-center">
+                  <div className={`text-5xl font-bold bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent mb-2`}>
+                    {stat.value}
                   </div>
-                ))}
-              </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
           {/* Services Section */}
           <section id="services" className="py-20 bg-white">
@@ -571,23 +591,34 @@ const shop1 = () => {
           </div>
 
           {/* Results Section */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center">
-            <h3 className="text-3xl font-bold text-white mb-8">Campaign Results</h3>
-            <div className="grid grid-cols-3 gap-8">
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+350%</div>
-                <div className="text-purple-100">Engagement Rate</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+220%</div>
-                <div className="text-purple-100">Lead Generation</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+180%</div>
-                <div className="text-purple-100">Conversion Rate</div>
-              </div>
-            </div>
-          </div>
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 md:p-12 text-center">
+  
+  {/* Heading: Smaller text on mobile (2xl), larger on desktop (3xl) */}
+  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8">
+    Campaign Results
+  </h3>
+  
+  {/* Grid: 1 column on mobile (stacked), 3 columns on desktop */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <div>
+      {/* Number: Smaller text on mobile (4xl), larger on desktop (5xl) */}
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+350%</div>
+      <div className="text-purple-100">Engagement Rate</div>
+    </div>
+    
+    <div>
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+220%</div>
+      <div className="text-purple-100">Lead Generation</div>
+    </div>
+    
+    <div>
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+180%</div>
+      <div className="text-purple-100">Conversion Rate</div>
+    </div>
+    
+  </div>
+</div>
         </div>
       </section>
     </div>

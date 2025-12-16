@@ -99,23 +99,23 @@ const shop2 = () => {
   };
 
   // Portfolio links - REPLACE URLs with your actual portfolio page URLs
-  const portfolioLinks = [
+ const portfolioLinks = [
     {
-      name: "Tech Startup",
+      name: "Cafe",
       url: "/shop1", // REPLACE WITH YOUR URL
-      icon: "💻",
+      icon: "🍽️",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Fashion Brand",
+      name: "Shoe shop ",
       url: "/shop2", // REPLACE WITH YOUR URL
-      icon: "👗",
+      icon: "👟",
       color: "from-pink-500 to-rose-500"
     },
     {
-      name: "Food & Beverage",
+      name: "Dental",
       url: "/shop3", // REPLACE WITH YOUR URL
-      icon: "🍽️",
+      icon: "🦷",
       color: "from-orange-500 to-amber-500"
     }
   ];
@@ -247,42 +247,62 @@ const shop2 = () => {
               <div className="h-[600px] overflow-y-auto bg-white">
           
           {/* Modern Glass Navbar */}
-          <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-              <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="text-3xl transform group-hover:scale-110 transition-transform">{config.businessIcon}</div>
-                <span className={`text-2xl font-black bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent`}>
-                  {config.businessName}
-                </span>
-              </div>
-              
-              <div className="hidden md:flex items-center gap-8">
-                <a href="#home" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
-                  Home
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
-                </a>
-                <a href="#about" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
-                  About
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
-                </a>
-                <a href="#collection" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
-                  Collection
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
-                </a>
-                <a href="#contact" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
-                  Contact
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
-                </a>
-              </div>
-              
-              <a 
-                href={config.primaryCTALink}
-                className={`bg-gradient-to-r ${config.primaryGradient} text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:shadow-xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all`}
-              >
-                {config.primaryCTA}
-              </a>
-            </div>
-          </nav>
+         <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
+  {/* CHANGE 1: Responsive Padding (px-4 py-3 on mobile, larger on desktop) */}
+  <div className="max-w-7xl mx-auto px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
+    
+    {/* CHANGE 2: Responsive Logo & Gap */}
+    <div className="flex items-center gap-2 md:gap-3 group cursor-pointer">
+      {/* Icon: smaller on mobile */}
+      <div className="text-2xl md:text-3xl transform group-hover:scale-110 transition-transform">
+        {config.businessIcon}
+      </div>
+      {/* Text: smaller on mobile */}
+      <span className={`text-lg md:text-2xl font-black bg-gradient-to-r ${config.primaryGradient} bg-clip-text text-transparent`}>
+        {config.businessName}
+      </span>
+    </div>
+    
+    {/* Desktop Links (Hidden on Mobile) */}
+    <div className="hidden md:flex items-center gap-8">
+      <a href="#home" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
+        Home
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
+      </a>
+      <a href="#about" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
+        About
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
+      </a>
+      <a href="#collection" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
+        Collection
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
+      </a>
+      <a href="#contact" className="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors relative group">
+        Contact
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-orange-600 group-hover:w-full transition-all"></span>
+      </a>
+    </div>
+    
+    {/* Right Side Actions */}
+    <div className="flex items-center gap-3">
+      {/* CTA Button: Smaller padding/text on mobile */}
+      <a 
+        href={config.primaryCTALink}
+        className={`bg-gradient-to-r ${config.primaryGradient} text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl font-bold text-xs md:text-sm hover:shadow-xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all`}
+      >
+        {config.primaryCTA}
+      </a>
+
+      {/* CHANGE 3: Hamburger Menu Icon (Visible ONLY on Mobile) */}
+      <button className="md:hidden text-gray-700 hover:text-amber-600 transition-colors p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</nav>
 
           {/* Modern Hero Section */}
           <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900">
@@ -337,10 +357,11 @@ const shop2 = () => {
           </section>
 
           {/* Floating Stats Bar */}
-          <section className="relative -mt-12 z-20">
+         <section className="relative -mt-12 z-20">
             <div className="max-w-6xl mx-auto px-6">
-              <div className={`bg-gradient-to-r ${config.primaryGradient} rounded-2xl shadow-2xl p-8`}>
-                <div className="grid grid-cols-4 gap-8">
+              <div className={`bg-gradient-to-r ${config.primaryGradient} rounded-2xl shadow-2xl p-6 md:p-8`}>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                   {config.stats.map((stat, idx) => (
                     <div key={idx} className="text-center text-white">
                       <div className="text-4xl font-black mb-1">{stat.value}</div>
@@ -348,6 +369,7 @@ const shop2 = () => {
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </section>
@@ -675,23 +697,34 @@ const shop2 = () => {
           </div>
 
           {/* Results Section */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center">
-            <h3 className="text-3xl font-bold text-white mb-8">Campaign Results</h3>
-            <div className="grid grid-cols-3 gap-8">
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+350%</div>
-                <div className="text-purple-100">Engagement Rate</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+220%</div>
-                <div className="text-purple-100">Lead Generation</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-white mb-2">+180%</div>
-                <div className="text-purple-100">Conversion Rate</div>
-              </div>
-            </div>
-          </div>
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 md:p-12 text-center">
+  
+  {/* Heading: Smaller text on mobile (2xl), larger on desktop (3xl) */}
+  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8">
+    Campaign Results
+  </h3>
+  
+  {/* Grid: 1 column on mobile (stacked), 3 columns on desktop */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <div>
+      {/* Number: Smaller text on mobile (4xl), larger on desktop (5xl) */}
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+350%</div>
+      <div className="text-purple-100">Engagement Rate</div>
+    </div>
+    
+    <div>
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+220%</div>
+      <div className="text-purple-100">Lead Generation</div>
+    </div>
+    
+    <div>
+      <div className="text-4xl md:text-5xl font-bold text-white mb-2">+180%</div>
+      <div className="text-purple-100">Conversion Rate</div>
+    </div>
+    
+  </div>
+</div>
         </div>
       </section>
     </div>
