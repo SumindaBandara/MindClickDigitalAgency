@@ -39,7 +39,7 @@ const UpdatedServicesPage = () => {
       features: [
         "Business & Audience Research (niche + competitors)",
         "Business Page Setup & Branding (logo, colors, about, highlights)",
-        "2 Social Media Platforms (FB + Instagram)",
+        "1 Social Media Platforms (FB + Instagram)",
         "Up to 8 Posts per month (flexible to your goals, no extra fee)",
         "Monthly Consultation Call (strategy & future goal planning)",
         "1 Ad Campaign Setup (budget separate)",
@@ -54,7 +54,7 @@ const UpdatedServicesPage = () => {
       features: [
         "Complete Business & Competitor Research",
         "Page Optimization + Business Theme Setup",
-        "3 Platforms (FB, IG + TikTok or LinkedIn)",
+        "2 Platforms (FB, IG + TikTok or LinkedIn)",
         "Around 12 Posts per month (flexible to campaign needs)",
         "2 Ad Campaigns per month (with optimization)",
         "Engagement Boost (reply to comments/messages)",
@@ -71,7 +71,7 @@ const UpdatedServicesPage = () => {
       features: [
         "Full Business Research + Market Positioning",
         "Business Page Optimization + Brand Guidelines",
-        "4 Platforms (FB, IG, TikTok, LinkedIn/YouTube Shorts)",
+        "3 Platforms (FB, IG, TikTok, LinkedIn/YouTube Shorts)",
         "16–20+ Posts per month (we focus on results, not limits)",
         "3–4 Ad Campaigns + Retargeting",
         "Custom Content Calendar + Marketing Strategy",

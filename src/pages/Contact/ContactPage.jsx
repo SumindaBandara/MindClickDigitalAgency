@@ -243,7 +243,7 @@ export default function ContactPage() {
               
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/YourPage"
+                  href="https://www.facebook.com/share/1DDoTxshhE/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -252,7 +252,7 @@ export default function ContactPage() {
                   <Facebook className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.instagram.com/YourProfile"
+                  href="https://www.instagram.com/themindclick.com_?igsh=dGJpcXptbW9mdWFl"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -261,7 +261,7 @@ export default function ContactPage() {
                   <Instagram className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/YourCompany"
+                  href="https://www.linkedin.com/company/themindclick/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
