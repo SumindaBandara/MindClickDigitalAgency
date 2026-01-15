@@ -91,25 +91,25 @@ const UpdatedServicesPage = () => {
       overview: "Professional websites built with modern MERN stack technology to establish your digital presence",
       packages: [
         {
-          name: "Basic Web Presence",
-          price: "Rs.20,000",
+          name: "Starter Plan",
+          price: "Rs.25,000",
           emoji: "🖥️",
           target: "For small businesses that just want an online face",
           features: [
-            "1–3 Pages (Home, About, Contact)",
+            "Important Pages (Home, About, Contact , etc..)",
             "Responsive design with React",
-            "Contact Form with Node.js backend",
+            "Contact Form ",
             "Basic SEO (meta tags, sitemap)",
             "Delivery in 1 Week"
           ]
         },
         {
-          name: "Business Website",
-          price: "Rs.40,000",
+          name: "Growth Plan",
+          price: "Rs.45,000",
           emoji: "🌐",
           target: "For service businesses that want credibility + features",
           features: [
-            "4–6 Pages (Home, About, Services, Gallery, Blog, Contact)",
+            "full functional Pages (Home, About, Services, Gallery, Blog, Contact)",
             "Admin Dashboard (basic CRUD operations)",
             "WhatsApp/FB Messenger integration",
             "Analytics Integration (Google Analytics)",
